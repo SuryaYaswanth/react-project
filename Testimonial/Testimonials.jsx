@@ -23,10 +23,10 @@ const Testimonials = () => {
     ];
 
     const handlePrevClick = () =>{
-        setCurrentIndex(currentIndex-1);
+        setCurrentIndex((currentIndex + testimonials.length-1) % testimonials.length);
     }
     const handleNextClick = () =>{
-       setCurrentIndex(currentIndex+1);
+       setCurrentIndex((currentIndex + 1) % testimonials.length);
     }
   return (
     <div className="testimonials">
